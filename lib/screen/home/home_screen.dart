@@ -78,12 +78,22 @@ class _HomeScreenState extends State<HomeScreen> {
                       scrollDirection: Axis.horizontal,
                       itemCount: _restaurants.length,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: EdgeInsets.only(
-                            left: index == 0 ? 14 : 0,
-                            right: index == (_restaurants.length - 1) ? 14 : 0,
+                        return InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              "/detail",
+                              arguments: _restaurants.elementAt(index),
+                            );
+                          },
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              left: index == 0 ? 14 : 0,
+                              right:
+                                  index == (_restaurants.length - 1) ? 14 : 0,
+                            ),
+                            child: itemHome(_restaurants.elementAt(index)),
                           ),
-                          child: itemHome(_restaurants.elementAt(index)),
                         );
                       },
                       separatorBuilder: (context, index) => SizedBox(width: 8),

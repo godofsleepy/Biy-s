@@ -51,7 +51,7 @@ Widget itemHome(Restaurant restaurant) {
                         fontSize: 5,
                       ),
                     ),
-                    onRatingUpdate: (rating) => {},
+                    onRatingUpdate: (rating) => null,
                   ),
                 ],
               ),
