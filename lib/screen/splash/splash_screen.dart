@@ -19,7 +19,9 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     setUpAnimation();
-    Timer(const Duration(seconds: 2), () {});
+    Timer(const Duration(milliseconds: 3000), () {
+      Navigator.pushReplacementNamed(context, "/home");
+    });
   }
 
   @override
