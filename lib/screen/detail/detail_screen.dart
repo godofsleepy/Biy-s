@@ -4,15 +4,10 @@ import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class DetailScreen extends StatefulWidget {
+class DetailScreen extends StatelessWidget {
   final Restaurant restaurant;
   DetailScreen({Key? key, required this.restaurant}) : super(key: key);
 
-  @override
-  _DetailScreenState createState() => _DetailScreenState();
-}
-
-class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +62,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                     borderRadius: BorderRadius.circular(30.0),
                                   ),
                                   builder: (context) {
-                                    return menuSheet(widget.restaurant.menus);
+                                    return menuSheet(restaurant.menus);
                                   });
                             },
                             iconSize: 35,
@@ -109,7 +104,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   Flexible(
                     flex: 6,
                     child: Hero(
-                      tag: widget.restaurant.pictureId ?? "",
+                      tag: restaurant.pictureId ?? "",
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
@@ -132,7 +127,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             topLeft: Radius.circular(70),
                           ),
                           child: Image.network(
-                            widget.restaurant.pictureId ?? "",
+                            restaurant.pictureId ?? "",
                             fit: BoxFit.cover,
                             height: double.infinity,
                           ),
@@ -154,14 +149,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        widget.restaurant.name ?? "",
+                        restaurant.name ?? "",
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
                       Text(
-                        widget.restaurant.city ?? "",
+                        restaurant.city ?? "",
                         style: TextStyle(
                           fontStyle: FontStyle.italic,
                           color: ResColor.yellow,
@@ -172,7 +167,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   RatingBar.builder(
                     glowRadius: 0,
                     unratedColor: Colors.transparent,
-                    initialRating: (widget.restaurant.rating ?? 0),
+                    initialRating: (restaurant.rating ?? 0),
                     direction: Axis.horizontal,
                     allowHalfRating: true,
                     itemSize: 25,
@@ -188,7 +183,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   SafeArea(
                     top: false,
                     child: Text(
-                      widget.restaurant.description ?? "",
+                      restaurant.description ?? "",
                     ),
                   )
                 ],
