@@ -1,4 +1,5 @@
 import 'package:biys/model/restaurant.dart';
+import 'package:biys/screen/detail/widget/menus_sheet.dart';
 import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -59,24 +60,14 @@ class _DetailScreenState extends State<DetailScreen> {
                           child: IconButton(
                             onPressed: () {
                               showModalBottomSheet(
+                                  backgroundColor: Colors.white,
                                   context: context,
                                   isScrollControlled: true,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
+                                    borderRadius: BorderRadius.circular(30.0),
                                   ),
                                   builder: (context) {
-                                    return DraggableScrollableSheet(
-                                        expand: false,
-                                        builder: (context, controller) {
-                                          return SingleChildScrollView(
-                                            controller: controller,
-                                            child: Container(
-                                              height: MediaQuery.of(context)
-                                                  .size
-                                                  .height,
-                                            ),
-                                          );
-                                        });
+                                    return menuSheet(widget.restaurant.menus);
                                   });
                             },
                             iconSize: 35,
