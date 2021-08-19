@@ -50,53 +50,101 @@ class _DetailScreenState extends State<DetailScreen> {
                   Flexible(
                     flex: 2,
                     fit: FlexFit.tight,
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Card(
-                            elevation: 6,
-                            shadowColor: ResColor.yellow,
-                            child: IconButton(
-                              onPressed: () {},
-                              iconSize: 35,
-                              icon: Icon(
-                                Icons.restaurant_menu,
-                                color: ResColor.yellow,
-                              ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Card(
+                          elevation: 6,
+                          shadowColor: ResColor.yellow,
+                          child: IconButton(
+                            onPressed: () {
+                              showModalBottomSheet(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  builder: (context) {
+                                    return DraggableScrollableSheet(
+                                        expand: false,
+                                        builder: (context, controller) {
+                                          return SingleChildScrollView(
+                                            controller: controller,
+                                            child: Container(
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height,
+                                            ),
+                                          );
+                                        });
+                                  });
+                            },
+                            iconSize: 35,
+                            icon: Icon(
+                              Icons.restaurant_menu,
+                              color: ResColor.yellow,
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(height: 30),
+                        Card(
+                          elevation: 6,
+                          shadowColor: ResColor.yellow,
+                          child: IconButton(
+                            onPressed: () {},
+                            iconSize: 35,
+                            icon: Icon(
+                              Icons.reviews,
+                              color: ResColor.yellow,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 30),
+                        Card(
+                          elevation: 6,
+                          shadowColor: ResColor.yellow,
+                          child: IconButton(
+                            onPressed: () {},
+                            iconSize: 35,
+                            icon: Icon(
+                              Icons.bookmark_outline,
+                              color: ResColor.yellow,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Flexible(
                     flex: 6,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(70),
-                          topLeft: Radius.circular(70),
-                        ),
-                        boxShadow: [
-                          BoxShadow(
-                            color: ResColor.yellow.withOpacity(0.4),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset:
-                                Offset(0, 2.5), // changes position of shadow
+                    child: Hero(
+                      tag: widget.restaurant.pictureId ?? "",
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(70),
+                            topLeft: Radius.circular(70),
                           ),
-                        ],
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(70),
-                          topLeft: Radius.circular(70),
+                          boxShadow: [
+                            BoxShadow(
+                              color: ResColor.yellow.withOpacity(0.3),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset:
+                                  Offset(0, 2.5), // changes position of shadow
+                            ),
+                          ],
                         ),
-                        child: Image.network(
-                          widget.restaurant.pictureId ?? "",
-                          fit: BoxFit.cover,
-                          height: double.infinity,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(70),
+                            topLeft: Radius.circular(70),
+                          ),
+                          child: Image.network(
+                            widget.restaurant.pictureId ?? "",
+                            fit: BoxFit.cover,
+                            height: double.infinity,
+                          ),
                         ),
                       ),
                     ),

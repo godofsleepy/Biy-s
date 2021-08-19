@@ -16,13 +16,16 @@ Widget itemHome(Restaurant restaurant) {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(300),
-                ),
-                child: Image.network(
-                  restaurant.pictureId ?? "",
-                  fit: BoxFit.cover,
+              child: Hero(
+                tag: restaurant.pictureId ?? "",
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(300),
+                  ),
+                  child: Image.network(
+                    restaurant.pictureId ?? "",
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
