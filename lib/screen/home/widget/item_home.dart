@@ -9,7 +9,7 @@ Widget itemHome(Restaurant restaurant) {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
       ),
-      elevation: 4,
+      elevation: 2,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(25.0),
         child: Column(

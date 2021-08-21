@@ -99,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       separatorBuilder: (context, index) => SizedBox(width: 8),
                     ),
                   ),
+            SizedBox(height: 10),
           ],
         ),
       ),

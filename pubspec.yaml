@@ -30,6 +30,7 @@ dependencies:
   google_fonts: ^2.1.0
   flutter_rating_bar: ^4.0.0
   page_transition: "^2.0.2"
+  path_provider: ^2.0.2
 
 dev_dependencies:
   flutter_test:
@@ -58,8 +59,6 @@ flutter_native_splash:
   # size of the app. Only one parameter can be used, color and background_image cannot both be set.
   color: "#e3fee2"
 
-  # To enable support for Android 12, set the following parameter to true.  Defaults to false.
-  android12: true
 
 # The following section is specific to Flutter.
 flutter:
