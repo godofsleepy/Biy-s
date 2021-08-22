@@ -1,4 +1,4 @@
-import 'package:biys/model/menus.dart';
+import 'package:biys/data/model/menus.dart';
 import 'package:flutter/material.dart';
 
 Widget menuSheet(Menus? menus) {

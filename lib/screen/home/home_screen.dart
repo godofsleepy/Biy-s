@@ -1,6 +1,6 @@
 import 'package:biys/data/data.dart';
-import 'package:biys/model/base.dart';
-import 'package:biys/model/restaurant.dart';
+import 'package:biys/data/model/base.dart';
+import 'package:biys/data/model/restaurant.dart';
 import 'package:biys/screen/home/widget/item_home.dart';
 import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';

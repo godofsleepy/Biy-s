@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'drink.dart';
 import 'food.dart';
 
 part 'generate/menus.g.dart';
@@ -8,7 +7,7 @@ part 'generate/menus.g.dart';
 @JsonSerializable()
 class Menus {
   List<Food>? foods;
-  List<Drink>? drinks;
+  List<Food>? drinks;
 
   Menus({this.foods, this.drinks});
 

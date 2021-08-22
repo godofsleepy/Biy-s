@@ -12,7 +12,7 @@ Menus _$MenusFromJson(Map<String, dynamic> json) {
         ?.map((e) => Food.fromJson(e as Map<String, dynamic>))
         .toList(),
     drinks: (json['drinks'] as List<dynamic>?)
-        ?.map((e) => Drink.fromJson(e as Map<String, dynamic>))
+        ?.map((e) => Food.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }

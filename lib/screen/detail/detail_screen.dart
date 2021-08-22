@@ -1,4 +1,4 @@
-import 'package:biys/model/restaurant.dart';
+import 'package:biys/data/model/restaurant.dart';
 import 'package:biys/screen/detail/widget/menus_sheet.dart';
 import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';

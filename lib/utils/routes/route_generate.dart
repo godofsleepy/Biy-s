@@ -1,4 +1,4 @@
-import 'package:biys/model/restaurant.dart';
+import 'package:biys/data/model/restaurant.dart';
 import 'package:biys/screen/detail/detail_screen.dart';
 import 'package:biys/screen/home/home_screen.dart';
 import 'package:biys/screen/splash/splash_screen.dart';
