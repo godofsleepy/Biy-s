@@ -1,4 +1,3 @@
-import 'package:biys/data/model/restaurant.dart';
 import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/screen/home/bloc/home_bloc.dart';
 import 'package:biys/screen/home/widget/item_home.dart';
@@ -16,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late HomeCubit _homeCubit;
+  TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -48,12 +48,20 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                 child: TextField(
-                  onChanged: (query) {
-                    setState(() {});
+                  controller: _searchController,
+                  onSubmitted: (query) {
+                    _homeCubit.searchRestaurant(query);
                   },
                   decoration: InputDecoration(
                     hintText: "Search",
                     filled: true,
+                    suffixIcon: InkWell(
+                      child: Icon(Icons.close, color: Colors.grey[500]),
+                      onTap: () {
+                        _searchController.clear();
+                        _homeCubit.loadRestaurant();
+                      },
+                    ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(14),
                       borderSide: BorderSide(
@@ -66,7 +74,32 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 20),
-              BlocBuilder<HomeCubit, HomeState>(
+              BlocConsumer<HomeCubit, HomeState>(
+                listener: (context, state) {
+                  if (state.status == HomeStatus.error) {
+                    final snackBar = SnackBar(
+                      duration: Duration(seconds: 3),
+                      backgroundColor: ResColor.yellow,
+                      elevation: 1,
+                      behavior: SnackBarBehavior.floating,
+                      content: Text(
+                        state.message,
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                      action: SnackBarAction(
+                        label: 'Ok',
+                        textColor: Colors.white,
+                        onPressed: () {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                        },
+                      ),
+                    );
+
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                },
                 builder: (context, state) {
                   if (state.status == HomeStatus.loading) {
                     return Center(
@@ -83,11 +116,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (context, index) {
                           return InkWell(
                             onTap: () {
-                              // Navigator.pushNamed(
-                              //   context,
-                              //   "/detail",
-                              //   arguments: _restaurants.elementAt(index),
-                              // );
+                              Navigator.pushNamed(
+                                context,
+                                "/detail",
+                                arguments: {
+                                  "rest": widget.client,
+                                  "id": state.data.elementAt(index).id,
+                                },
+                              );
                             },
                             child: Padding(
                               padding: EdgeInsets.only(

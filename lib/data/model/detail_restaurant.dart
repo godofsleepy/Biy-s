@@ -4,7 +4,7 @@ import 'category.dart';
 import 'customer_review.dart';
 import 'menus.dart';
 
-part 'generate/detail_restaurant.g.dart';
+part 'detail_restaurant.g.dart';
 
 @JsonSerializable()
 class DetailRestaurant {

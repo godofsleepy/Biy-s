@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../customer_review.dart';
+part of 'customer_review.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

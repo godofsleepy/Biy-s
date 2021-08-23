@@ -24,8 +24,10 @@ Widget itemHome(Restaurant restaurant) {
                   ),
                   child: Image.network(
                     restaurant.pictureId != null
-                        ? "https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}"
+                        ? "https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}"
                         : "",
+                    errorBuilder: (context, object, stackTrace) =>
+                        Icon(Icons.error),
                     fit: BoxFit.cover,
                   ),
                 ),

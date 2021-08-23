@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'food.dart';
 
-part 'generate/menus.g.dart';
+part 'menus.g.dart';
 
 @JsonSerializable()
 class Menus {

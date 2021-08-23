@@ -56,4 +56,23 @@ class HomeCubit extends Cubit<HomeState> {
       ));
     }
   }
+
+  void searchRestaurant(String query) async {
+    emit(state.copyWith(status: HomeStatus.loading));
+    try {
+      BaseRestaurants data = await _client.getSearch(query);
+      if (data.error == false) {
+        emit(state.copyWith(
+          data: data.restaurants,
+          status: HomeStatus.success,
+        ));
+      }
+    } catch (e) {
+      print(e.toString());
+      emit(state.copyWith(
+        status: HomeStatus.error,
+        message: "Server error",
+      ));
+    }
+  }
 }

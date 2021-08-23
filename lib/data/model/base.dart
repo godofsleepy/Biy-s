@@ -4,7 +4,7 @@ import 'package:biys/data/model/customer_review.dart';
 import 'package:biys/data/model/detail_restaurant.dart';
 import 'restaurant.dart';
 
-part 'generate/base.g.dart';
+part 'base.g.dart';
 
 @JsonSerializable()
 class BaseRestaurants {
@@ -28,12 +28,12 @@ class BaseRestaurants {
 class BaseRestaurant {
   bool? error;
   String? message;
-  List<DetailRestaurant>? restaurants;
+  DetailRestaurant? restaurant;
 
   BaseRestaurant({
     this.error,
     this.message,
-    this.restaurants,
+    this.restaurant,
   });
 
   factory BaseRestaurant.fromJson(Map<String, dynamic> json) =>

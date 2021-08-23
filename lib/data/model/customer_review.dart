@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'generate/customer_review.g.dart';
+part 'customer_review.g.dart';
 
 @JsonSerializable()
 class CustomerReview {

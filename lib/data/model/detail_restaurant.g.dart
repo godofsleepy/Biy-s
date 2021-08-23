@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../detail_restaurant.dart';
+part of 'detail_restaurant.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
