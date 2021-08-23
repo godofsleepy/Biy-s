@@ -16,7 +16,7 @@ Widget menuSheet(Menus? menus) {
             child: Column(
               children: [
                 Text(
-                  "Menus",
+                  "Menu",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

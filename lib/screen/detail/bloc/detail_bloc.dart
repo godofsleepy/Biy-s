@@ -1,4 +1,5 @@
 import 'package:biys/data/model/base.dart';
+import 'package:biys/data/request/review_request.dart';
 import 'package:biys/data/source/api/rest_client.dart';
 import 'package:equatable/equatable.dart';
 
@@ -47,6 +48,23 @@ class DetailCubit extends Cubit<DetailState> {
           data: data.restaurant,
           status: DetailStatus.success,
         ));
+      }
+    } catch (e) {
+      print(e.toString());
+      emit(state.copyWith(
+        status: DetailStatus.error,
+        message: "Server error",
+      ));
+    }
+  }
+
+  void addReview(String name, String review) async {
+    emit(state.copyWith(status: DetailStatus.loading));
+    try {
+      BaseCustomerReviews data = await _client.postReview(
+          "12345", ReviewRequest(id: _id, name: name, review: review));
+      if (data.error == false) {
+        loadDetail();
       }
     } catch (e) {
       print(e.toString());

@@ -61,17 +61,19 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseCustomerReviews<dynamic>> postReview(reviewRequest) async {
+  Future<BaseCustomerReviews<dynamic>> postReview(token, reviewRequest) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(reviewRequest.toJson());
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<BaseCustomerReviews<dynamic>>(
-            Options(method: 'GET', headers: <String, dynamic>{}, extra: _extra)
-                .compose(_dio.options, '/review',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+        _setStreamType<BaseCustomerReviews<dynamic>>(Options(
+                method: 'POST',
+                headers: <String, dynamic>{r'X-Auth-Token': token},
+                extra: _extra)
+            .compose(_dio.options, '/review',
+                queryParameters: queryParameters, data: _data)
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = BaseCustomerReviews<dynamic>.fromJson(_result.data!);
     return value;
   }

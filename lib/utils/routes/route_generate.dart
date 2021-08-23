@@ -1,4 +1,3 @@
-import 'package:biys/data/model/restaurant.dart';
 import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/screen/detail/detail_screen.dart';
 import 'package:biys/screen/home/home_screen.dart';
@@ -26,7 +25,8 @@ class RouteGenerate {
       case "/detail":
         return MaterialPageRoute(
           builder: (_) => DetailScreen(
-            restaurant: settings.arguments as Restaurant,
+            client: arguments!["rest"] as RestClient,
+            id: arguments["id"] as String,
           ),
         );
 

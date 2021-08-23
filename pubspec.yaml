@@ -30,6 +30,7 @@ dependencies:
   google_fonts: ^2.1.0
   flutter_rating_bar: ^4.0.0
   page_transition: "^2.0.2"
+  cached_network_image: ^3.1.0
 
   # state management
   flutter_bloc: ^7.1.0

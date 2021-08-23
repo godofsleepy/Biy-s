@@ -18,6 +18,7 @@ abstract class RestClient {
   @GET("/detail/{id}")
   Future<BaseRestaurant> getDetail(@Path("id") String id);
 
-  @GET("/review")
-  Future<BaseCustomerReviews> postReview(@Body() ReviewRequest reviewRequest);
+  @POST("/review")
+  Future<BaseCustomerReviews> postReview(@Header("X-Auth-Token") String token,
+      @Body() ReviewRequest reviewRequest);
 }
