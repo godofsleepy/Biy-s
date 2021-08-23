@@ -33,13 +33,11 @@ dependencies:
 
   # state management
   flutter_bloc: ^7.1.0
+  equatable: ^2.0.3
 
   # api
   dio: ^4.0.0
   retrofit: ^2.0.1
-
-  # util
-  logger: ^1.0.0
 
 dev_dependencies:
   flutter_test:

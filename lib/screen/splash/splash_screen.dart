@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/utils/resource/rescolor.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,8 +21,10 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
     setUpAnimation();
+
     Timer(const Duration(milliseconds: 3000), () {
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushReplacementNamed(context, "/home",
+          arguments: {"rest": RestClient(Dio())});
     });
   }
 

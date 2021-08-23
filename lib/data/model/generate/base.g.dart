@@ -6,14 +6,55 @@ part of '../base.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Base _$BaseFromJson(Map<String, dynamic> json) {
-  return Base(
+BaseRestaurants _$BaseRestaurantsFromJson(Map<String, dynamic> json) {
+  return BaseRestaurants(
+    error: json['error'] as bool?,
+    message: json['message'] as String?,
     restaurants: (json['restaurants'] as List<dynamic>?)
         ?.map((e) => Restaurant.fromJson(e as Map<String, dynamic>))
         .toList(),
   );
 }
 
-Map<String, dynamic> _$BaseToJson(Base instance) => <String, dynamic>{
+Map<String, dynamic> _$BaseRestaurantsToJson(BaseRestaurants instance) =>
+    <String, dynamic>{
+      'error': instance.error,
+      'message': instance.message,
       'restaurants': instance.restaurants,
+    };
+
+BaseRestaurant _$BaseRestaurantFromJson(Map<String, dynamic> json) {
+  return BaseRestaurant(
+    error: json['error'] as bool?,
+    message: json['message'] as String?,
+    restaurants: (json['restaurants'] as List<dynamic>?)
+        ?.map((e) => DetailRestaurant.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
+}
+
+Map<String, dynamic> _$BaseRestaurantToJson(BaseRestaurant instance) =>
+    <String, dynamic>{
+      'error': instance.error,
+      'message': instance.message,
+      'restaurants': instance.restaurants,
+    };
+
+BaseCustomerReviews<Restaurant> _$BaseCustomerReviewsFromJson<Restaurant>(
+    Map<String, dynamic> json) {
+  return BaseCustomerReviews<Restaurant>(
+    error: json['error'] as bool?,
+    message: json['message'] as String?,
+    customerReviews: (json['customerReviews'] as List<dynamic>?)
+        ?.map((e) => CustomerReview.fromJson(e as Map<String, dynamic>))
+        .toList(),
+  );
+}
+
+Map<String, dynamic> _$BaseCustomerReviewsToJson<Restaurant>(
+        BaseCustomerReviews<Restaurant> instance) =>
+    <String, dynamic>{
+      'error': instance.error,
+      'message': instance.message,
+      'customerReviews': instance.customerReviews,
     };

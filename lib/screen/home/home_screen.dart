@@ -1,115 +1,119 @@
-import 'package:biys/data/data.dart';
-import 'package:biys/data/model/base.dart';
 import 'package:biys/data/model/restaurant.dart';
+import 'package:biys/data/source/api/rest_client.dart';
+import 'package:biys/screen/home/bloc/home_bloc.dart';
 import 'package:biys/screen/home/widget/item_home.dart';
 import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  final RestClient client;
+  HomeScreen({Key? key, required this.client}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late Base _base;
-  late List<Restaurant> _restaurants = [];
+  late HomeCubit _homeCubit;
 
   @override
   void initState() {
     super.initState();
-    _loadData();
+    _homeCubit = HomeCubit(widget.client);
+    _homeCubit.loadRestaurant();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: EdgeInsets.all(14),
-              child: Text(
-                "Find\nYour Best\nRestaurants!",
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w600,
-                  color: ResColor.yellow,
-                  // color: ResColor.green,
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-              child: TextField(
-                onChanged: (query) {
-                  setState(() {
-                    _restaurants = _base.restaurants!
-                        .where((restaurant) => restaurant.name!
-                            .toLowerCase()
-                            .contains(query.toLowerCase()))
-                        .toList();
-                  });
-                },
-                decoration: InputDecoration(
-                  hintText: "Search",
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    borderSide: BorderSide(
-                      width: 0,
-                      style: BorderStyle.none,
-                    ),
+    return BlocProvider(
+      create: (context) => _homeCubit,
+      child: Scaffold(
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: EdgeInsets.all(14),
+                child: Text(
+                  "Find\nYour Best\nRestaurants!",
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                    color: ResColor.yellow,
+                    // color: ResColor.green,
                   ),
-                  prefixIcon: Icon(Icons.search, color: Colors.grey[500]),
                 ),
               ),
-            ),
-            SizedBox(height: 20),
-            _restaurants.isEmpty
-                ? Expanded(
-                    child: Center(child: Image.asset("assets/empty.jpeg")),
-                  )
-                : Expanded(
-                    child: ListView.separated(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: _restaurants.length,
-                      itemBuilder: (context, index) {
-                        return InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              "/detail",
-                              arguments: _restaurants.elementAt(index),
-                            );
-                          },
-                          child: Padding(
-                            padding: EdgeInsets.only(
-                              left: index == 0 ? 14 : 0,
-                              right:
-                                  index == (_restaurants.length - 1) ? 14 : 0,
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                child: TextField(
+                  onChanged: (query) {
+                    setState(() {});
+                  },
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    filled: true,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      borderSide: BorderSide(
+                        width: 0,
+                        style: BorderStyle.none,
+                      ),
+                    ),
+                    prefixIcon: Icon(Icons.search, color: Colors.grey[500]),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              BlocBuilder<HomeCubit, HomeState>(
+                builder: (context, state) {
+                  if (state.status == HomeStatus.loading) {
+                    return Center(
+                      child: CircularProgressIndicator(
+                        color: ResColor.yellow,
+                      ),
+                    );
+                  } else if (state.status == HomeStatus.success) {
+                    return Expanded(
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
+                        itemCount: state.data.length,
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                            onTap: () {
+                              // Navigator.pushNamed(
+                              //   context,
+                              //   "/detail",
+                              //   arguments: _restaurants.elementAt(index),
+                              // );
+                            },
+                            child: Padding(
+                              padding: EdgeInsets.only(
+                                left: index == 0 ? 14 : 0,
+                                right:
+                                    index == (state.data.length - 1) ? 14 : 0,
+                              ),
+                              child: itemHome(state.data.elementAt(index)),
                             ),
-                            child: itemHome(_restaurants.elementAt(index)),
-                          ),
-                        );
-                      },
-                      separatorBuilder: (context, index) => SizedBox(width: 8),
-                    ),
-                  ),
-            SizedBox(height: 10),
-          ],
+                          );
+                        },
+                        separatorBuilder: (context, index) =>
+                            SizedBox(width: 8),
+                      ),
+                    );
+                  }
+                  return Expanded(
+                    child: Center(child: Image.asset("assets/empty.jpeg")),
+                  );
+                },
+              ),
+              SizedBox(height: 10)
+            ],
+          ),
         ),
       ),
     );
-  }
-
-  void _loadData() {
-    setState(() {
-      _base = Base.fromJson(Data.data);
-      _restaurants = _base.restaurants ?? [];
-    });
   }
 }

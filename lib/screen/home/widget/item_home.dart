@@ -23,7 +23,9 @@ Widget itemHome(Restaurant restaurant) {
                     bottomLeft: Radius.circular(300),
                   ),
                   child: Image.network(
-                    restaurant.pictureId ?? "",
+                    restaurant.pictureId != null
+                        ? "https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}"
+                        : "",
                     fit: BoxFit.cover,
                   ),
                 ),
