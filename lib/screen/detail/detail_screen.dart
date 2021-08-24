@@ -7,6 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:like_button/like_button.dart';
 
 class DetailScreen extends StatefulWidget {
   final RestClient client;
@@ -18,14 +19,20 @@ class DetailScreen extends StatefulWidget {
   _DetailScreenState createState() => _DetailScreenState();
 }
 
-class _DetailScreenState extends State<DetailScreen> {
+class _DetailScreenState extends State<DetailScreen>
+    with SingleTickerProviderStateMixin {
   late DetailCubit _detailCubit;
+  late AnimationController _animationController;
+  bool _isPlaying = false;
 
   @override
   void initState() {
     super.initState();
     _detailCubit = DetailCubit(widget.id, widget.client);
     _detailCubit.loadDetail();
+
+    _animationController =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 450));
   }
 
   @override
@@ -158,15 +165,27 @@ class _DetailScreenState extends State<DetailScreen> {
                                   ),
                                 ),
                                 SizedBox(height: 30),
-                                Card(
-                                  elevation: 6,
-                                  shadowColor: ResColor.yellow,
-                                  child: IconButton(
-                                    onPressed: () {},
-                                    iconSize: 35,
-                                    icon: Icon(
-                                      Icons.bookmark_outline,
-                                      color: ResColor.yellow,
+                                Container(
+                                  width: 63,
+                                  child: Card(
+                                    elevation: 6,
+                                    shadowColor: ResColor.yellow,
+                                    child: LikeButton(
+                                      likeCountPadding: EdgeInsets.zero,
+                                      size: 55,
+                                      bubblesColor: BubblesColor(
+                                        dotPrimaryColor: ResColor.yellow,
+                                        dotSecondaryColor: ResColor.yellow,
+                                      ),
+                                      likeBuilder: (bool isLiked) {
+                                        return Icon(
+                                          isLiked
+                                              ? Icons.bookmark
+                                              : Icons.bookmark_outline,
+                                          color: ResColor.yellow,
+                                          size: 35,
+                                        );
+                                      },
                                     ),
                                   ),
                                 ),
@@ -235,42 +254,60 @@ class _DetailScreenState extends State<DetailScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
-                                state.data?.name ?? "",
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w700,
+                              Expanded(
+                                child: Text(
+                                  state.data?.name ?? "",
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w700,
+                                  ),
                                 ),
                               ),
                               Text(
-                                state.data?.city ?? "",
+                                state.data?.categories
+                                        ?.map((i) => i.name)
+                                        .join(", ") ??
+                                    "",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                   color: ResColor.yellow,
+                                  fontSize: 18,
                                 ),
                               ),
                             ],
                           ),
-                          RatingBar.builder(
-                            glowRadius: 0,
-                            unratedColor: Colors.transparent,
-                            initialRating: (state.data?.rating ?? 0),
-                            direction: Axis.horizontal,
-                            allowHalfRating: true,
-                            itemSize: 25,
-                            itemBuilder: (context, _) => Text(
-                              "⭐",
-                              style: TextStyle(
-                                fontSize: 5,
+                          Row(
+                            children: [
+                              RatingBar.builder(
+                                glowRadius: 0,
+                                unratedColor: Colors.transparent,
+                                initialRating: (state.data?.rating ?? 0),
+                                direction: Axis.horizontal,
+                                allowHalfRating: true,
+                                itemSize: 25,
+                                itemBuilder: (context, _) => Text(
+                                  "⭐",
+                                  style: TextStyle(
+                                    fontSize: 5,
+                                  ),
+                                ),
+                                onRatingUpdate: (rating) => null,
                               ),
-                            ),
-                            onRatingUpdate: (rating) => null,
+                              // Text("/ ${state.}"),
+                            ],
                           ),
                           SizedBox(height: 10),
+                          Text(
+                            state.data?.description ?? "",
+                          ),
+                          SizedBox(height: 20),
                           SafeArea(
                             top: false,
-                            child: Text(
-                              state.data?.description ?? "",
+                            child: Container(
+                              width: MediaQuery.of(context).size.width,
+                              alignment: Alignment.center,
+                              child: Text(
+                                  "📍 ${state.data?.address ?? '-'}, ${state.data?.city ?? '-'}"),
                             ),
                           ),
                         ],
