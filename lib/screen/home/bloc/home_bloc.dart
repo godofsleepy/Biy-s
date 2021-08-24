@@ -62,10 +62,17 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       BaseRestaurants data = await _client.getSearch(query);
       if (data.error == false) {
-        emit(state.copyWith(
-          data: data.restaurants,
-          status: HomeStatus.success,
-        ));
+        if (data.restaurants != null && data.restaurants!.isNotEmpty) {
+          emit(state.copyWith(
+            data: data.restaurants,
+            status: HomeStatus.success,
+          ));
+        } else {
+          emit(state.copyWith(
+            status: HomeStatus.error,
+            message: "Tidak ditemukan",
+          ));
+        }
       }
     } catch (e) {
       print(e.toString());
