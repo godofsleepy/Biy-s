@@ -22,17 +22,12 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen>
     with SingleTickerProviderStateMixin {
   late DetailCubit _detailCubit;
-  late AnimationController _animationController;
-  bool _isPlaying = false;
 
   @override
   void initState() {
     super.initState();
     _detailCubit = DetailCubit(widget.id, widget.client);
     _detailCubit.loadDetail();
-
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 450));
   }
 
   @override
@@ -171,6 +166,8 @@ class _DetailScreenState extends State<DetailScreen>
                                     elevation: 6,
                                     shadowColor: ResColor.yellow,
                                     child: LikeButton(
+                                      isLiked: state.isFav,
+                                      onTap: onLikeButtonTapped,
                                       likeCountPadding: EdgeInsets.zero,
                                       size: 55,
                                       bubblesColor: BubblesColor(
@@ -324,5 +321,14 @@ class _DetailScreenState extends State<DetailScreen>
         ),
       ),
     );
+  }
+
+  Future<bool> onLikeButtonTapped(bool isLiked) async {
+    if (isLiked) {
+      _detailCubit.deleteFromFavorite();
+      return false;
+    }
+    _detailCubit.addToFavorite();
+    return true;
   }
 }
