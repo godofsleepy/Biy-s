@@ -1,4 +1,5 @@
 import 'package:biys/data/source/api/rest_client.dart';
+import 'package:biys/screen/bookmark/bookmark_screen.dart';
 import 'package:biys/screen/detail/detail_screen.dart';
 import 'package:biys/screen/home/home_screen.dart';
 import 'package:biys/screen/setting/setting_screen.dart';
@@ -33,6 +34,10 @@ class RouteGenerate {
       case "/setting":
         return MaterialPageRoute(
           builder: (_) => SettingScreen(),
+        );
+      case "/bookmark":
+        return MaterialPageRoute(
+          builder: (_) => BookmarkScreen(),
         );
 
       default:

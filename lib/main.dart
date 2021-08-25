@@ -4,7 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
-  await GetStorage.init();
+  await GetStorage.init("favorite");
   runApp(MyApp());
 }
 

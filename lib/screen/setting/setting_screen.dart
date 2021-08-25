@@ -103,6 +103,9 @@ class _SettingScreenState extends State<SettingScreen> {
                   child: Column(
                     children: [
                       ListTile(
+                        onTap: () {
+                          Navigator.pushNamed(context, "/bookmark");
+                        },
                         leading: Icon(
                           Icons.bookmark,
                           color: ResColor.yellow,

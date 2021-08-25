@@ -4,8 +4,6 @@ import 'package:get_storage/get_storage.dart';
 class LocalStorage {
   final GetStorage _box = GetStorage("favorite");
 
-  LocalStorage();
-
   addRestaurant(DetailRestaurant detail) {
     List<dynamic>? data = _box.read('data');
     if (data == null) {
@@ -13,6 +11,17 @@ class LocalStorage {
     } else {
       data.add(detail.toJson());
       _box.write('data', data);
+    }
+  }
+
+  List<DetailRestaurant>? getAllRestaurant() {
+    List<dynamic>? data = _box.read('data');
+    if (data == null) {
+      return [];
+    } else {
+      return data
+          .map((e) => DetailRestaurant.fromJson(e as Map<String, dynamic>))
+          .toList();
     }
   }
 
