@@ -34,17 +34,38 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding: EdgeInsets.all(14),
-                child: Text(
-                  "Find\nYour Best\nRestaurants!",
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
-                    color: ResColor.yellow,
-                    // color: ResColor.green,
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.all(14),
+                    child: Text(
+                      "Find\nYour Best\nRestaurants!",
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600,
+                        color: ResColor.yellow,
+                        // color: ResColor.green,
+                      ),
+                    ),
                   ),
-                ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, "/setting");
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.all(14),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(1000),
+                        child: Image.network(
+                          "https://scontent-sin6-3.cdninstagram.com/v/t51.2885-19/s320x320/237119163_4440752802678736_3164882788951583613_n.jpg?_nc_ht=scontent-sin6-3.cdninstagram.com&_nc_cat=104&_nc_ohc=6x7IYLV9pf8AX-7SJTv&edm=ABfd0MgBAAAA&ccb=7-4&oh=b2995f800d324ca8df00222695189b78&oe=612C56A5&_nc_sid=7bff83",
+                          height: 50,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),

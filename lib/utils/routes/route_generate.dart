@@ -1,6 +1,7 @@
 import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/screen/detail/detail_screen.dart';
 import 'package:biys/screen/home/home_screen.dart';
+import 'package:biys/screen/setting/setting_screen.dart';
 import 'package:biys/screen/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -28,6 +29,10 @@ class RouteGenerate {
             client: arguments!["rest"] as RestClient,
             id: arguments["id"] as String,
           ),
+        );
+      case "/setting":
+        return MaterialPageRoute(
+          builder: (_) => SettingScreen(),
         );
 
       default:
