@@ -3,9 +3,8 @@ import 'package:get_storage/get_storage.dart';
 import 'package:collection/collection.dart';
 
 class LocalStorage {
-  final GetStorage _box = GetStorage("favorite");
-
   addRestaurant(DetailRestaurant detail) {
+    GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');
     if (data == null) {
       _box.write('data', [detail.toJson()]);
@@ -16,6 +15,7 @@ class LocalStorage {
   }
 
   List<DetailRestaurant>? getAllRestaurant() {
+    GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');
     if (data == null) {
       return [];
@@ -27,6 +27,7 @@ class LocalStorage {
   }
 
   bool checkIsFav(DetailRestaurant detail) {
+    GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');
     if (data == null) {
       return false;
@@ -42,6 +43,7 @@ class LocalStorage {
   }
 
   DetailRestaurant? getFavRestaurant(String id) {
+    GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');
     if (data == null) {
       return null;
@@ -54,6 +56,7 @@ class LocalStorage {
   }
 
   void deleteRestaurant(DetailRestaurant detail) {
+    GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');
     if (data != null) {
       Map<String, dynamic>? resto = data.firstWhereOrNull(

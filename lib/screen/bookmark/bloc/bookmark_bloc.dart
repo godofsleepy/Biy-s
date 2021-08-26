@@ -42,11 +42,13 @@ class BookmarkCubit extends Cubit<BookmarkState> {
       if (data != null) {
         emit(state.copyWith(status: BookmarkStatus.success, data: data));
       } else {
-        state.copyWith(status: BookmarkStatus.error, message: "Terjadi error");
+        emit(state.copyWith(
+            status: BookmarkStatus.error, message: "Terjadi error"));
       }
     } catch (e) {
       print(e);
-      state.copyWith(status: BookmarkStatus.error, message: "Terjadi error");
+      emit(state.copyWith(
+          status: BookmarkStatus.error, message: "Terjadi error"));
     }
   }
 }

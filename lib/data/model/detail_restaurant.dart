@@ -1,10 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
-
 import 'category.dart';
 import 'customer_review.dart';
 import 'menus.dart';
-
-part 'detail_restaurant.g.dart';
 
 @JsonSerializable()
 class DetailRestaurant {
@@ -32,9 +29,35 @@ class DetailRestaurant {
     this.customerReviews,
   });
 
-  factory DetailRestaurant.fromJson(Map<String, dynamic> json) {
-    return _$DetailRestaurantFromJson(json);
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'description': description,
+      'city': city,
+      'address': address,
+      'pictureId': pictureId,
+      'categories': categories?.map((x) => x.toJson()).toList(),
+      'menus': menus?.toJson(),
+      'rating': rating,
+      'customerReviews': customerReviews?.map((x) => x.toJson()).toList(),
+    };
   }
 
-  Map<String, dynamic> toJson() => _$DetailRestaurantToJson(this);
+  factory DetailRestaurant.fromJson(Map<String, dynamic> map) {
+    return DetailRestaurant(
+      id: map['id'],
+      name: map['name'],
+      description: map['description'],
+      city: map['city'],
+      address: map['address'],
+      pictureId: map['pictureId'],
+      categories: List<Category>.from(
+          map['categories']?.map((x) => Category.fromJson(x))),
+      menus: Menus.fromJson(map['menus']),
+      rating: map['rating'].toDouble(),
+      customerReviews: List<CustomerReview>.from(
+          map['customerReviews']?.map((x) => CustomerReview.fromJson(x))),
+    );
+  }
 }
