@@ -5,7 +5,7 @@ class DateTimeHelper {
     // Date and Time Format
     final now = DateTime.now();
     final dateFormat = DateFormat('y/M/d');
-    final timeSpecific = "14:43:00";
+    final timeSpecific = "11:00:00";
     final completeFormat = DateFormat('y/M/d H:m:s');
 
     // Today Format
