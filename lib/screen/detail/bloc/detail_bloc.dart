@@ -1,3 +1,4 @@
+import 'package:biys/data/source/local/local_storage.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -5,7 +6,6 @@ import 'package:biys/data/model/base.dart';
 import 'package:biys/data/model/detail_restaurant.dart';
 import 'package:biys/data/request/review_request.dart';
 import 'package:biys/data/source/api/rest_client.dart';
-import 'package:biys/data/source/local/local_storage.dart';
 
 enum DetailStatus { initial, success, loading, error }
 
@@ -40,17 +40,29 @@ class DetailState extends Equatable {
 }
 
 class DetailCubit extends Cubit<DetailState> {
-  final local = LocalStorage();
+  final bool fromBookmark;
+  final LocalStorage _local = LocalStorage();
   final RestClient _client;
   final String _id;
-  DetailCubit(this._id, this._client) : super(DetailState());
+  DetailCubit(this._client, this._id, this.fromBookmark) : super(DetailState());
 
   void loadDetail() async {
-    emit(state.copyWith(status: DetailStatus.loading));
     try {
+      if (fromBookmark) {
+        DetailRestaurant? detail = _local.getFavRestaurant(this._id);
+        if (detail != null) {
+          return emit(state.copyWith(
+              data: detail, status: DetailStatus.success, isFav: true));
+        }
+        return emit(state.copyWith(
+          status: DetailStatus.error,
+          message: "error",
+        ));
+      }
+      emit(state.copyWith(status: DetailStatus.loading));
       BaseRestaurant data = await _client.getDetail(_id);
       if (data.error == false && data.restaurant != null) {
-        bool isFav = local.checkIsFav(data.restaurant!);
+        bool isFav = _local.checkIsFav(data.restaurant!);
         emit(state.copyWith(
           data: data.restaurant,
           status: DetailStatus.success,
@@ -85,7 +97,7 @@ class DetailCubit extends Cubit<DetailState> {
 
   void addToFavorite() {
     try {
-      local.addRestaurant(state.data!);
+      _local.addRestaurant(state.data!);
       emit(state.copyWith(
         isFav: true,
       ));
@@ -100,7 +112,7 @@ class DetailCubit extends Cubit<DetailState> {
 
   void deleteFromFavorite() {
     try {
-      local.deleteRestaurant(state.data!);
+      _local.deleteRestaurant(state.data!);
       emit(state.copyWith(
         isFav: false,
       ));

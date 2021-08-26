@@ -1,11 +1,17 @@
 import 'dart:ui';
 
-import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:biys/data/source/api/rest_client.dart';
+import 'package:biys/utils/resource/rescolor.dart';
+
 class SettingScreen extends StatefulWidget {
-  SettingScreen({Key? key}) : super(key: key);
+  final RestClient restClient;
+  SettingScreen({
+    Key? key,
+    required this.restClient,
+  }) : super(key: key);
 
   @override
   _SettingScreenState createState() => _SettingScreenState();
@@ -104,7 +110,8 @@ class _SettingScreenState extends State<SettingScreen> {
                     children: [
                       ListTile(
                         onTap: () {
-                          Navigator.pushNamed(context, "/bookmark");
+                          Navigator.pushNamed(context, "/bookmark",
+                              arguments: {"rest": widget.restClient});
                         },
                         leading: Icon(
                           Icons.bookmark,

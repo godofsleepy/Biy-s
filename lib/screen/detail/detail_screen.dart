@@ -1,19 +1,25 @@
-import 'package:biys/data/source/api/rest_client.dart';
-import 'package:biys/screen/detail/bloc/detail_bloc.dart';
-import 'package:biys/screen/detail/widget/menus_sheet.dart';
-import 'package:biys/screen/detail/widget/review_sheet.dart';
-import 'package:biys/utils/resource/rescolor.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:like_button/like_button.dart';
 
+import 'package:biys/data/source/api/rest_client.dart';
+import 'package:biys/screen/detail/bloc/detail_bloc.dart';
+import 'package:biys/screen/detail/widget/menus_sheet.dart';
+import 'package:biys/screen/detail/widget/review_sheet.dart';
+import 'package:biys/utils/resource/rescolor.dart';
+
 class DetailScreen extends StatefulWidget {
+  final bool fromBookmark;
   final RestClient client;
   final String id;
-  DetailScreen({Key? key, required this.client, required this.id})
-      : super(key: key);
+  DetailScreen({
+    Key? key,
+    this.fromBookmark = false,
+    required this.client,
+    required this.id,
+  }) : super(key: key);
 
   @override
   _DetailScreenState createState() => _DetailScreenState();
@@ -26,7 +32,11 @@ class _DetailScreenState extends State<DetailScreen>
   @override
   void initState() {
     super.initState();
-    _detailCubit = DetailCubit(widget.id, widget.client);
+    _detailCubit = DetailCubit(
+      widget.client,
+      widget.id,
+      widget.fromBookmark,
+    );
     _detailCubit.loadDetail();
   }
 
@@ -147,9 +157,11 @@ class _DetailScreenState extends State<DetailScreen>
                                           ),
                                           builder: (context) {
                                             return ReviewSheet(
-                                                customerReviews:
-                                                    state.data?.customerReviews,
-                                                detailCubit: _detailCubit);
+                                              customerReviews:
+                                                  state.data?.customerReviews,
+                                              detailCubit: _detailCubit,
+                                              fromBookmark: widget.fromBookmark,
+                                            );
                                           });
                                     },
                                     iconSize: 35,

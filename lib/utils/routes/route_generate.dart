@@ -31,13 +31,25 @@ class RouteGenerate {
             id: arguments["id"] as String,
           ),
         );
+      case "/detail/bookmark":
+        return MaterialPageRoute(
+          builder: (_) => DetailScreen(
+            client: arguments!["rest"] as RestClient,
+            id: arguments["id"] as String,
+            fromBookmark: true,
+          ),
+        );
       case "/setting":
         return MaterialPageRoute(
-          builder: (_) => SettingScreen(),
+          builder: (_) => SettingScreen(
+            restClient: arguments!["rest"] as RestClient,
+          ),
         );
       case "/bookmark":
         return MaterialPageRoute(
-          builder: (_) => BookmarkScreen(),
+          builder: (_) => BookmarkScreen(
+            restClient: arguments!["rest"] as RestClient,
+          ),
         );
 
       default:

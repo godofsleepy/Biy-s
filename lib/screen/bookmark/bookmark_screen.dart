@@ -1,11 +1,17 @@
-import 'package:biys/screen/bookmark/bloc/bookmark_bloc.dart';
-import 'package:biys/screen/bookmark/widget/item_bookmark.dart';
-import 'package:biys/utils/resource/rescolor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:biys/data/source/api/rest_client.dart';
+import 'package:biys/screen/bookmark/bloc/bookmark_bloc.dart';
+import 'package:biys/screen/bookmark/widget/item_bookmark.dart';
+import 'package:biys/utils/resource/rescolor.dart';
+
 class BookmarkScreen extends StatefulWidget {
-  BookmarkScreen({Key? key}) : super(key: key);
+  final RestClient restClient;
+  BookmarkScreen({
+    Key? key,
+    required this.restClient,
+  }) : super(key: key);
 
   @override
   _BookmarkScreenState createState() => _BookmarkScreenState();
@@ -77,14 +83,25 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                   itemCount: state.data.length,
                   padding: EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   itemBuilder: (contex, index) {
-                    return itemBookmark(context, state.data[index]);
+                    return itemBookmark(
+                      context,
+                      state.data[index],
+                      () {
+                        Navigator.pushNamed(
+                          context,
+                          "/detail/bookmark",
+                          arguments: {
+                            "rest": widget.restClient,
+                            "id": state.data[index].id,
+                          },
+                        ).then((value) => _bookmarkCubit.intialData());
+                      },
+                    );
                   },
                   separatorBuilder: (context, index) => SizedBox(height: 18),
                 );
               }
-              return Expanded(
-                child: Center(child: Image.asset("assets/empty.jpeg")),
-              );
+              return Center(child: Image.asset("assets/empty.jpeg"));
             },
           )),
     );

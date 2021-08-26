@@ -52,7 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, "/setting");
+                      Navigator.pushNamed(context, "/setting", arguments: {
+                        "rest": widget.client,
+                      });
                     },
                     child: Padding(
                       padding: EdgeInsets.all(14),
