@@ -40,7 +40,12 @@ class BookmarkCubit extends Cubit<BookmarkState> {
     try {
       List<DetailRestaurant>? data = _local.getAllRestaurant();
       if (data != null) {
-        emit(state.copyWith(status: BookmarkStatus.success, data: data));
+        if (data.isEmpty) {
+          emit(state.copyWith(
+              status: BookmarkStatus.error, message: "Belum ada favorite"));
+        } else {
+          emit(state.copyWith(status: BookmarkStatus.success, data: data));
+        }
       } else {
         emit(state.copyWith(
             status: BookmarkStatus.error, message: "Terjadi error"));

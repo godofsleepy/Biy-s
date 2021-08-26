@@ -32,11 +32,11 @@ dependencies:
   page_transition: "^2.0.2"
   cached_network_image: ^3.1.0
   like_button: ^2.0.3
-  url_launcher: ^6.0.9
 
   # state management
   flutter_bloc: ^7.1.0
   equatable: ^2.0.3
+  rxdart: ^0.27.1
 
   # api
   dio: ^4.0.0
@@ -45,6 +45,12 @@ dependencies:
   # local
   get_storage: ^2.0.3
   collection: ^1.15.0
+
+  # util 
+  url_launcher: ^6.0.9
+  flutter_local_notifications: ^8.1.1+1
+  intl: ^0.17.0
+  android_alarm_manager_plus: ^1.2.0
 
 dev_dependencies:
   flutter_test:
