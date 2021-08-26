@@ -14,6 +14,7 @@ class LocalStorage {
     if (data == null) {
       return false;
     } else {
+      print("data : $data");
       return data;
     }
   }

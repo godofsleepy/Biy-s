@@ -2,38 +2,19 @@ import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:biys/data/source/local/local_storage.dart';
 import 'package:biys/utils/background/background_service.dart';
 import 'package:biys/utils/background/date_time_helper.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SettingState extends Equatable {
-  final bool statusAlarm;
-  SettingState({
-    this.statusAlarm = false,
-  });
-
-  SettingState copyWith({
-    bool? statusAlarm,
-  }) {
-    return SettingState(
-      statusAlarm: statusAlarm ?? this.statusAlarm,
-    );
-  }
-
-  @override
-  List<Object> get props => [statusAlarm];
-}
-
-class SettingCubit extends Cubit<SettingState> {
+class SettingCubit extends Cubit<bool> {
   final LocalStorage _local = LocalStorage();
-  SettingCubit() : super(SettingState());
+  SettingCubit() : super(false);
 
-  void initialData() {
+  void initialData() async {
     bool status = _local.getNotif();
-    emit(state.copyWith(statusAlarm: status));
+    return emit(status);
   }
 
   void notificationSwitch(bool value) async {
-    emit(state.copyWith(statusAlarm: value));
+    emit(value);
     if (value) {
       print('Activated');
       await AndroidAlarmManager.periodic(
@@ -46,7 +27,7 @@ class SettingCubit extends Cubit<SettingState> {
         wakeup: true,
       );
     } else {
-      print('Scheduling News Canceled');
+      print('Canceled');
       await AndroidAlarmManager.cancel(1);
     }
     _local.setNotif(value);

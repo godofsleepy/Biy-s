@@ -3,8 +3,10 @@ import 'dart:io';
 import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:biys/utils/background/background_service.dart';
 import 'package:biys/utils/notification/notification_helper.dart';
+import 'package:biys/utils/observer/bloc_observer.dart';
 import 'package:biys/utils/routes/route_generate.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -27,6 +29,7 @@ void main() async {
   await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
   _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
 
+  Bloc.observer = MyBlocObserver();
   runApp(MyApp());
 }
 

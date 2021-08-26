@@ -1,5 +1,7 @@
 import 'package:biys/data/model/restaurant.dart';
+import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/utils/routes/navigation.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -75,13 +77,16 @@ class NotificationHelper {
 
     await flutterLocalNotificationsPlugin.show(
         0, titleNotification, titleNews, platformChannelSpecifics,
-        payload: "test");
+        payload: restaurant.id);
   }
 
   void configureSelectNotificationSubject(String route) {
     selectNotificationSubject.stream.listen(
       (String payload) async {
-        print(payload);
+        Navigation.push("/detail", {
+          "id": payload,
+          "rest": RestClient(Dio()),
+        });
       },
     );
   }
