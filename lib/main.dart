@@ -18,6 +18,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await GetStorage.init("favorite");
+  Bloc.observer = MyBlocObserver();
   final NotificationHelper _notificationHelper = NotificationHelper();
   final BackgroundService _service = BackgroundService();
 
@@ -28,8 +29,6 @@ void main() async {
   }
   await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
   _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
-
-  Bloc.observer = MyBlocObserver();
   runApp(MyApp());
 }
 

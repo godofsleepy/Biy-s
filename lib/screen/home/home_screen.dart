@@ -1,6 +1,7 @@
 import 'package:biys/data/source/api/rest_client.dart';
 import 'package:biys/screen/home/bloc/home_bloc.dart';
 import 'package:biys/screen/home/widget/item_home.dart';
+import 'package:biys/utils/notification/notification_helper.dart';
 import 'package:biys/utils/resource/rescolor.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +18,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   late HomeCubit _homeCubit;
   TextEditingController _searchController = TextEditingController();
+  final NotificationHelper _notificationHelper = NotificationHelper();
 
   @override
   void initState() {
     super.initState();
+    _notificationHelper.configureSelectNotificationSubject(context);
     _homeCubit = HomeCubit(widget.client);
     _homeCubit.loadRestaurant();
   }

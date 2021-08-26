@@ -18,7 +18,7 @@ class SettingCubit extends Cubit<bool> {
     if (value) {
       print('Activated');
       await AndroidAlarmManager.periodic(
-        Duration(seconds: 10),
+        Duration(seconds: 5),
         1,
         BackgroundService.callback,
         // startAt: DateTime.now(),
