@@ -1,4 +1,5 @@
-import 'package:biys/utils/navigation/navigation.dart';
+import 'package:biys/data/model/restaurant.dart';
+import 'package:biys/utils/routes/navigation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -49,17 +50,19 @@ class NotificationHelper {
   }
 
   Future<void> showNotification(
-    FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin,
-  ) async {
+      FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin,
+      Restaurant restaurant) async {
     var _channelId = "1";
     var _channelName = "channel_01";
-    var _channelDescription = "dicoding news channel";
+    var _channelDescription = "Biy's Restaurant Channgel";
 
     var androidPlatformChannelSpecifics = AndroidNotificationDetails(
         _channelId, _channelName, _channelDescription,
         importance: Importance.max,
         priority: Priority.high,
+        icon: "app_icon",
         ticker: 'ticker',
+        // sound: ,
         styleInformation: DefaultStyleInformation(true, true));
 
     var iOSPlatformChannelSpecifics = IOSNotificationDetails();
@@ -67,8 +70,8 @@ class NotificationHelper {
         android: androidPlatformChannelSpecifics,
         iOS: iOSPlatformChannelSpecifics);
 
-    var titleNotification = "<b>Headline News</b>";
-    var titleNews = "test";
+    var titleNotification = "<b>Our daily Recommendation</b>";
+    var titleNews = restaurant.name;
 
     await flutterLocalNotificationsPlugin.show(
         0, titleNotification, titleNews, platformChannelSpecifics,

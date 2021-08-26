@@ -3,6 +3,21 @@ import 'package:get_storage/get_storage.dart';
 import 'package:collection/collection.dart';
 
 class LocalStorage {
+  void setNotif(bool value) {
+    GetStorage _box = GetStorage("favorite");
+    _box.write('notif', value);
+  }
+
+  bool getNotif() {
+    GetStorage _box = GetStorage("favorite");
+    bool? data = _box.read('notif');
+    if (data == null) {
+      return false;
+    } else {
+      return data;
+    }
+  }
+
   addRestaurant(DetailRestaurant detail) {
     GetStorage _box = GetStorage("favorite");
     List<dynamic>? data = _box.read('data');

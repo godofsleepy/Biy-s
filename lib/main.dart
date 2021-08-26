@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+import 'package:biys/utils/background/background_service.dart';
 import 'package:biys/utils/notification/notification_helper.dart';
 import 'package:biys/utils/routes/route_generate.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +17,13 @@ void main() async {
 
   await GetStorage.init("favorite");
   final NotificationHelper _notificationHelper = NotificationHelper();
+  final BackgroundService _service = BackgroundService();
+
+  _service.initializeIsolate();
+
+  if (Platform.isAndroid) {
+    await AndroidAlarmManager.initialize();
+  }
   await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
   _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
 
