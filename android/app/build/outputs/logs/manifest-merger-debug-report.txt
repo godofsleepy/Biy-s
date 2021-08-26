@@ -1,0 +1,311 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+MERGED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+MERGED from [:sqflite] /Users/rifatkhadafy/Downloads/biys/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:android_alarm_manager_plus] /Users/rifatkhadafy/Downloads/biys/build/android_alarm_manager_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-23:12
+MERGED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [:path_provider] /Users/rifatkhadafy/Downloads/biys/build/path_provider/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/22338925e474378125b14f08df9dde2b/appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb639b0de294c474d115530aeef8baf0/media-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b130234404b521bc5b47eb122d6507ee/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ed7929cd9dc7e0e437e8cb6a0af4259f/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb88824d394a2c07a3a4ff6d3fee4be1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6f795ed6ea53b61ffafeac166f379886/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d228918d709b820eb4ea7c18bf429453/vectordrawable-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/f95dba800fbc3608650d58780b701e9c/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/bd333bfaa489ca195da40f821b41f1db/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/cb79e457c5c12deb65f5af2eb4021971/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/42dd936b3d0b386e47fdd056b0d9e278/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/7b5388bc5aee6a92bb91ae404bb73e71/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/76ee4f6ca8699571bcb6b3070c148323/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/80979fb9618e9208312d106aea2195a5/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/1170c99671b99ef8234d3dfc7e61cc66/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c76db4b4ae3fb630526b6131b1b01ad5/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:17:1-26:12
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/dd456633b84a167d341291aaabbb7a51/jetified-threetenabp-1.2.3/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/48956e8c3d5fff5fa6f7dc848c856024/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c1b492f508355a7ced79bb7db95c2032/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/123f3a45e81bf6a58b45d4570897576b/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/74ea5b713ce7cfd2f946202b385aa178/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d68fe691ebbe6cfaf21160e06cd9ef5f/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b3900b7b81e2043db970458aed44716b/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6e58537dec4b919a0d22de12be280fbe/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/e6fe758656a6982b4bac18ea45854bdd/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6290c932c3c40f78a9c2fe14f7abb13a/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ada1fd7fbbfae4f2c91d966d74e080fa/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/abac21801ebdb81a666f844f25edb8a5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6cffc7b959d449b39574b1ded14ff5f0/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:2:5-32
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:1-86:12
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:3:5-80
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-81
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:3:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:4:5-66
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-66
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-66
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:4:22-63
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:5:22-65
+queries
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:6:5-22:11
+intent#action:name:android.intent.action.VIEW+data:scheme:https
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:8:3-11:12
+action#android.intent.action.VIEW
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:9:5-57
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:9:13-54
+data
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:10:5-36
+	android:scheme
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:10:11-33
+intent#action:name:android.intent.action.DIAL+data:scheme:tel
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:13:3-16:12
+action#android.intent.action.DIAL
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:14:5-57
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:14:13-54
+intent#action:name:android.intent.action.SEND+data:mimeType:*/*
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:18:3-21:12
+action#android.intent.action.SEND
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:19:5-57
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:19:13-54
+application
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:23:4-85:19
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/dd456633b84a167d341291aaabbb7a51/jetified-threetenabp-1.2.3/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/dd456633b84a167d341291aaabbb7a51/jetified-threetenabp-1.2.3/AndroidManifest.xml:7:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b3900b7b81e2043db970458aed44716b/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b3900b7b81e2043db970458aed44716b/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:24:9-29
+	android:icon
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:25:9-45
+service#dev.fluttercommunity.plus.androidalarmmanager.AlarmService
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:26:9-29:31
+	android:exported
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:29:5-29
+	android:permission
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:28:5-61
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:27:5-78
+receiver#dev.fluttercommunity.plus.androidalarmmanager.AlarmBroadcastReceiver
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:30:1-32:31
+	android:exported
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:32:5-29
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:31:5-88
+receiver#dev.fluttercommunity.plus.androidalarmmanager.RebootBroadcastReceiver
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:33:1-39:12
+	android:enabled
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:35:5-28
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:34:5-89
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:36:5-38:21
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:37:9-78
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:37:17-68
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:41:9-106
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-106
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-106
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:41:19-103
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:42:9-47:20
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-20:20
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-20:20
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:42:19-107
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:43:11-46:27
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:45:15-81
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:45:23-79
+activity#com.hachiand.biys.MainActivity
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:49:9-79:20
+	android:launchMode
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:51:13-43
+	android:hardwareAccelerated
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:54:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:55:13-55
+	android:configChanges
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:53:13-163
+	android:theme
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:52:13-47
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:50:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:60:13-63:17
+	android:resource
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:62:15-52
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:61:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:69:13-72:17
+	android:resource
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:71:15-61
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:70:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:73:13-76:29
+action#android.intent.action.MAIN
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:74:17-68
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:74:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:75:17-76
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:75:27-74
+meta-data#flutterEmbedding
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:82:9-84:33
+	android:value
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:84:13-30
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml:83:13-44
+uses-sdk
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+MERGED from [:sqflite] /Users/rifatkhadafy/Downloads/biys/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/rifatkhadafy/Downloads/biys/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:android_alarm_manager_plus] /Users/rifatkhadafy/Downloads/biys/build/android_alarm_manager_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:android_alarm_manager_plus] /Users/rifatkhadafy/Downloads/biys/build/android_alarm_manager_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/rifatkhadafy/Downloads/biys/build/path_provider/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/rifatkhadafy/Downloads/biys/build/path_provider/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/22338925e474378125b14f08df9dde2b/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/22338925e474378125b14f08df9dde2b/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb639b0de294c474d115530aeef8baf0/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb639b0de294c474d115530aeef8baf0/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b130234404b521bc5b47eb122d6507ee/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b130234404b521bc5b47eb122d6507ee/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ed7929cd9dc7e0e437e8cb6a0af4259f/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ed7929cd9dc7e0e437e8cb6a0af4259f/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb88824d394a2c07a3a4ff6d3fee4be1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/eb88824d394a2c07a3a4ff6d3fee4be1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6f795ed6ea53b61ffafeac166f379886/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6f795ed6ea53b61ffafeac166f379886/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d228918d709b820eb4ea7c18bf429453/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d228918d709b820eb4ea7c18bf429453/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/f95dba800fbc3608650d58780b701e9c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/f95dba800fbc3608650d58780b701e9c/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/bd333bfaa489ca195da40f821b41f1db/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/bd333bfaa489ca195da40f821b41f1db/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/cb79e457c5c12deb65f5af2eb4021971/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/cb79e457c5c12deb65f5af2eb4021971/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/42dd936b3d0b386e47fdd056b0d9e278/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/42dd936b3d0b386e47fdd056b0d9e278/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/7b5388bc5aee6a92bb91ae404bb73e71/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/7b5388bc5aee6a92bb91ae404bb73e71/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/76ee4f6ca8699571bcb6b3070c148323/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/76ee4f6ca8699571bcb6b3070c148323/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/80979fb9618e9208312d106aea2195a5/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/80979fb9618e9208312d106aea2195a5/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/1170c99671b99ef8234d3dfc7e61cc66/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/1170c99671b99ef8234d3dfc7e61cc66/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c76db4b4ae3fb630526b6131b1b01ad5/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c76db4b4ae3fb630526b6131b1b01ad5/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/20bb5969e43cb1cd92713f97802f5994/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/dd456633b84a167d341291aaabbb7a51/jetified-threetenabp-1.2.3/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.threetenabp:threetenabp:1.2.3] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/dd456633b84a167d341291aaabbb7a51/jetified-threetenabp-1.2.3/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/48956e8c3d5fff5fa6f7dc848c856024/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/48956e8c3d5fff5fa6f7dc848c856024/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c1b492f508355a7ced79bb7db95c2032/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/c1b492f508355a7ced79bb7db95c2032/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/123f3a45e81bf6a58b45d4570897576b/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/123f3a45e81bf6a58b45d4570897576b/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/74ea5b713ce7cfd2f946202b385aa178/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/74ea5b713ce7cfd2f946202b385aa178/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d68fe691ebbe6cfaf21160e06cd9ef5f/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/d68fe691ebbe6cfaf21160e06cd9ef5f/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b3900b7b81e2043db970458aed44716b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/b3900b7b81e2043db970458aed44716b/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6e58537dec4b919a0d22de12be280fbe/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6e58537dec4b919a0d22de12be280fbe/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/e6fe758656a6982b4bac18ea45854bdd/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/e6fe758656a6982b4bac18ea45854bdd/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6290c932c3c40f78a9c2fe14f7abb13a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6290c932c3c40f78a9c2fe14f7abb13a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ada1fd7fbbfae4f2c91d966d74e080fa/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/ada1fd7fbbfae4f2c91d966d74e080fa/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/abac21801ebdb81a666f844f25edb8a5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/abac21801ebdb81a666f844f25edb8a5/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6cffc7b959d449b39574b1ded14ff5f0/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/rifatkhadafy/.gradle/caches/transforms-2/files-2.1/6cffc7b959d449b39574b1ded14ff5f0/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/rifatkhadafy/Downloads/biys/android/app/src/debug/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-19:29
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/rifatkhadafy/Downloads/biys/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:25-79
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] /Users/rifatkhadafy/Downloads/biys/build/url_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74

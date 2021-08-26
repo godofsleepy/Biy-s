@@ -1,15 +1,25 @@
+import 'package:biys/utils/notification/notification_helper.dart';
 import 'package:biys/utils/routes/route_generate.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+    FlutterLocalNotificationsPlugin();
+
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await GetStorage.init("favorite");
+  // final NotificationHelper _notificationHelper = NotificationHelper();
+  // await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
+  // _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
+
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
