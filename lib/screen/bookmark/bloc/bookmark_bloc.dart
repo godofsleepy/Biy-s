@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:biys/data/model/detail_restaurant.dart';
 import 'package:biys/data/source/local/local_storage.dart';
 
-enum BookmarkStatus { initial, success, error }
+enum BookmarkStatus { initial, success, error, loading }
 
 class BookmarkState extends Equatable {
   final BookmarkStatus status;
@@ -32,27 +32,34 @@ class BookmarkState extends Equatable {
   List<Object> get props => [status, data, message];
 }
 
-class BookmarkCubit extends Cubit<BookmarkState> {
+class BookmarkEvent extends Equatable {
+  @override
+  List<Object?> get props => [];
+}
+
+class BookmarkCubit extends Bloc<BookmarkEvent, BookmarkState> {
   final LocalStorage _local = LocalStorage();
   BookmarkCubit() : super(BookmarkState());
 
-  void intialData() {
+  @override
+  Stream<BookmarkState> mapEventToState(BookmarkEvent event) async* {
     try {
+      yield (state.copyWith(status: BookmarkStatus.loading));
       List<DetailRestaurant>? data = _local.getAllRestaurant();
       if (data != null) {
         if (data.isEmpty) {
-          emit(state.copyWith(
+          yield (state.copyWith(
               status: BookmarkStatus.error, message: "Belum ada favorite"));
         } else {
-          emit(state.copyWith(status: BookmarkStatus.success, data: data));
+          yield (state.copyWith(status: BookmarkStatus.success, data: data));
         }
       } else {
-        emit(state.copyWith(
+        yield (state.copyWith(
             status: BookmarkStatus.error, message: "Terjadi error"));
       }
     } catch (e) {
       print(e);
-      emit(state.copyWith(
+      yield (state.copyWith(
           status: BookmarkStatus.error, message: "Terjadi error"));
     }
   }

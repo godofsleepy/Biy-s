@@ -99,7 +99,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             ),
                           ),
                           imageUrl:
-                              "https://scontent-sin6-3.cdninstagram.com/v/t51.2885-19/s320x320/237119163_4440752802678736_3164882788951583613_n.jpg?_nc_ht=scontent-sin6-3.cdninstagram.com&_nc_cat=104&_nc_ohc=6x7IYLV9pf8AX-7SJTv&edm=ABfd0MgBAAAA&ccb=7-4&oh=b2995f800d324ca8df00222695189b78&oe=612C56A5&_nc_sid=7bff83",
+                              "https://instagram.fcgk25-1.fna.fbcdn.net/v/t51.2885-19/s320x320/237119163_4440752802678736_3164882788951583613_n.jpg?_nc_ht=instagram.fcgk25-1.fna.fbcdn.net&_nc_ohc=6x7IYLV9pf8AX9UsvSi&edm=ABfd0MgBAAAA&ccb=7-4&oh=87298c9982d1a2b3884e1a57b9c708c3&oe=612E50E5&_nc_sid=7bff83",
                           height: 60,
                         ),
                       ),

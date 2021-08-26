@@ -23,9 +23,8 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
   @override
   void initState() {
     super.initState();
-
     _bookmarkCubit = BookmarkCubit();
-    _bookmarkCubit.intialData();
+    _bookmarkCubit..add(BookmarkEvent());
   }
 
   @override
@@ -51,6 +50,12 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
             ),
           ),
           body: BlocConsumer<BookmarkCubit, BookmarkState>(
+            listenWhen: (previous, next) {
+              if (previous != next) {
+                return true;
+              }
+              return false;
+            },
             listener: (context, state) {
               if (state.status == BookmarkStatus.error) {
                 final snackBar = SnackBar(
@@ -77,6 +82,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
               }
             },
             builder: (context, state) {
+              print("Build");
               if (state.status == BookmarkStatus.success) {
                 return ListView.separated(
                   shrinkWrap: true,
@@ -94,7 +100,7 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
                             "rest": widget.restClient,
                             "id": state.data[index].id,
                           },
-                        ).then((value) => _bookmarkCubit.intialData());
+                        ).then((value) => _bookmarkCubit.add(BookmarkEvent()));
                       },
                     );
                   },

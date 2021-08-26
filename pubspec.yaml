@@ -34,7 +34,7 @@ dependencies:
   like_button: ^2.0.3
 
   # state management
-  flutter_bloc: ^7.1.0
+  flutter_bloc: ^7.2.0
   equatable: ^2.0.3
   rxdart: ^0.27.1
 

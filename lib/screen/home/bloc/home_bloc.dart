@@ -47,6 +47,11 @@ class HomeCubit extends Cubit<HomeState> {
           data: data.restaurants,
           status: HomeStatus.success,
         ));
+      } else {
+        emit(state.copyWith(
+          status: HomeStatus.error,
+          message: data.message,
+        ));
       }
     } catch (e) {
       print(e.toString());
@@ -73,6 +78,11 @@ class HomeCubit extends Cubit<HomeState> {
             message: "Tidak ditemukan",
           ));
         }
+      } else {
+        emit(state.copyWith(
+          status: HomeStatus.error,
+          message: data.message,
+        ));
       }
     } catch (e) {
       print(e.toString());
