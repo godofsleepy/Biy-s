@@ -18,6 +18,8 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
+  bool _notifValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,10 +135,17 @@ class _SettingScreenState extends State<SettingScreen> {
                           color: ResColor.yellow,
                           size: 35,
                         ),
-                        subtitle: Text("Daily Notification at 11 AM"),
                         title: Text("Notification"),
-                        trailing:
-                            Switch(value: false, onChanged: (value) => value),
+                        subtitle: Text("Daily Notification at 11 AM"),
+                        trailing: Switch(
+                          activeColor: ResColor.yellow,
+                          value: _notifValue,
+                          onChanged: (value) {
+                            setState(() {
+                              _notifValue = value;
+                            });
+                          },
+                        ),
                       ),
                     ],
                   ))

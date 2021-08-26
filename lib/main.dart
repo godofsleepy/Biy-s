@@ -12,9 +12,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await GetStorage.init("favorite");
-  // final NotificationHelper _notificationHelper = NotificationHelper();
-  // await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
-  // _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
+  final NotificationHelper _notificationHelper = NotificationHelper();
+  await _notificationHelper.initNotifications(flutterLocalNotificationsPlugin);
+  _notificationHelper.requestIOSPermissions(flutterLocalNotificationsPlugin);
 
   runApp(MyApp());
 }
