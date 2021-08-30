@@ -1,4 +1,4 @@
-# MovieJetpack
+# BIY'S
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -20,8 +20,11 @@
 ### Built With
 
 * Flutter
+* ✅ Animation
 * ✅ Bloc Patter using flutter_bloc
 * ✅ DIO & Retrofit Flutter
+* ✅ Background fetch using Android alarm manager
+* ✅ local notification
 * ✅ Unit Test 
 
 [product-screenshot]: design.png
