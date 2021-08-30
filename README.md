@@ -22,6 +22,7 @@
 * Flutter
 * ✅ Animation
 * ✅ Bloc Patter using flutter_bloc
+* ✅ Local Storage using Get Storage
 * ✅ DIO & Retrofit Flutter
 * ✅ Background fetch using Android alarm manager
 * ✅ local notification
