@@ -63,22 +63,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Padding(
                       padding: EdgeInsets.all(14),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(1000),
-                        child: CachedNetworkImage(
-                          height: 50,
-                          placeholder: (context, url) => Center(
-                            child: Container(
-                              height: 30,
-                              width: 30,
-                              child: CircularProgressIndicator(
-                                color: ResColor.yellow,
-                              ),
-                            ),
-                          ),
-                          imageUrl:
-                              'https://instagram.fcgk25-1.fna.fbcdn.net/v/t51.2885-19/s320x320/237119163_4440752802678736_3164882788951583613_n.jpg?_nc_ht=instagram.fcgk25-1.fna.fbcdn.net&_nc_ohc=6x7IYLV9pf8AX9UsvSi&edm=ABfd0MgBAAAA&ccb=7-4&oh=87298c9982d1a2b3884e1a57b9c708c3&oe=612E50E5&_nc_sid=7bff83',
-                        ),
-                      ),
+                          borderRadius: BorderRadius.circular(1000),
+                          child: Image.asset(
+                            "assets/me.jpeg",
+                            height: 50,
+                            width: 50,
+                            fit: BoxFit.cover,
+                          )),
                     ),
                   ),
                 ],
