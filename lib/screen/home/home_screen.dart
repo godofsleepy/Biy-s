@@ -3,7 +3,6 @@ import 'package:biys/screen/home/bloc/home_bloc.dart';
 import 'package:biys/screen/home/widget/item_home.dart';
 import 'package:biys/utils/notification/notification_helper.dart';
 import 'package:biys/utils/resource/rescolor.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
