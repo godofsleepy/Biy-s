@@ -38,7 +38,7 @@ class _ReviewSheetState extends State<ReviewSheet> {
                 padding: EdgeInsets.all(14),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(30.0),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
                 ),
                 child: Column(
                   children: [

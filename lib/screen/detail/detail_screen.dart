@@ -127,8 +127,8 @@ class _DetailScreenState extends State<DetailScreen>
                                           context: context,
                                           isScrollControlled: true,
                                           shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(30.0),
+                                            borderRadius: BorderRadius.vertical(
+                                                top: Radius.circular(30)),
                                           ),
                                           builder: (context) {
                                             return menuSheet(state.data?.menus);
@@ -152,8 +152,8 @@ class _DetailScreenState extends State<DetailScreen>
                                           context: context,
                                           isScrollControlled: true,
                                           shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(30.0),
+                                            borderRadius: BorderRadius.vertical(
+                                                top: Radius.circular(30)),
                                           ),
                                           builder: (context) {
                                             return ReviewSheet(
