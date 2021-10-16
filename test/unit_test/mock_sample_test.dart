@@ -7,7 +7,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 
 import '../json_reader.dart';
-import '../test_helper.mocks.dart';
 
 void main() {
   const BASE_URL = "https://restaurant-api.dicoding.dev/";

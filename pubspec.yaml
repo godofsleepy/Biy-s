@@ -54,6 +54,7 @@ dependencies:
 
 dev_dependencies:
   # test
+  test: ^1.17.10
   http_mock_adapter: ^0.3.2
   bloc_test: ^8.2.0
   mockito: ^5.0.15
