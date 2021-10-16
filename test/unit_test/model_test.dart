@@ -9,7 +9,10 @@ void main() {
   test('Test base method fromJson', () {
     String jsondata = readJson('dummy_data/list.json');
     BaseRestaurants base = BaseRestaurants.fromJson(json.decode(jsondata));
+
+    // Check there's no error.
     expect(base.error, false);
+    // Count list should be 20.
     expect(base.restaurants!.length, equals(20));
   });
 }
