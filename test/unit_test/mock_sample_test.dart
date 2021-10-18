@@ -9,15 +9,16 @@ import 'package:http_mock_adapter/http_mock_adapter.dart';
 import '../json_reader.dart';
 
 void main() {
-  const BASE_URL = "https://restaurant-api.dicoding.dev/";
+  const BASE_URL = "https://restaurant-api.dicoding.dev";
   late RestClient mockClient;
   late Dio dio;
   late DioAdapter dioAdapter;
 
   setUp(() {
     dio = Dio();
-    mockClient = RestClient(dio, baseUrl: BASE_URL);
     dioAdapter = DioAdapter(dio: dio);
+    dio.httpClientAdapter = dioAdapter;
+    mockClient = RestClient(dio, baseUrl: BASE_URL);
   });
 
   group("Sample Group", () {

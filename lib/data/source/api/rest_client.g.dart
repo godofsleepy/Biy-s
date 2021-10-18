@@ -8,7 +8,7 @@ part of 'rest_client.dart';
 
 class _RestClient implements RestClient {
   _RestClient(this._dio, {this.baseUrl}) {
-    baseUrl ??= 'https://restaurant-api.dicoding.dev/';
+    baseUrl ??= 'https://restaurant-api.dicoding.dev';
   }
 
   final Dio _dio;
